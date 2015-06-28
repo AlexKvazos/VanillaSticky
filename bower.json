@@ -1,0 +1,29 @@
+{
+  "name": "vanillasticky",
+  "version": "0.0.1",
+  "authors": [
+    "AlexKvazos <contact@alexkvazos.com>"
+  ],
+  "description": "Fix elements to the viewport when they scroll past a position. No jQuery!",
+  "main": "vanillasticky.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "javascript",
+    "sticky",
+    "fixed",
+    "vanilla",
+    "agnostic"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/AlexKvazos/VanillaSticky",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
