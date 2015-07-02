@@ -6,9 +6,18 @@
   } else {
     root.VanillaSticky = factory();
   }
-})(this, function VanillaStickyFacory() {
+})(this, function VanillaStickyFactory() {
 
   var nodes = [];
+  var updatingNode, x;
+
+  // update each node's bounding client rect every 300ms
+  setInterval(function updateBoundingClientRects() {
+    for (x = 0; x < nodes.length; x++) {
+      updatingNode = nodes[x];
+      updatingNode.boundingClientRect = updatingNode.getBoundingClientRect();
+    }
+  }, 300);
 
   window.addEventListener('scroll', function onScroll() {
     var node, i;
@@ -16,7 +25,7 @@
       node = nodes[i];
 
       // get top bounding rect and node style
-      var top = node.getBoundingClientRect().top;
+      var top = node.boundingClientRect.top;
       var st = node.style;
 
       // if the node is above the line offset and is not stickied
@@ -52,6 +61,9 @@
     attach: function(DOMNode, offset) {
       DOMNode.VanillaStickyOffset = offset || 0;
       nodes.push(DOMNode);
+    },
+    detach: function(DOMNode) {
+      nodes.splice(nodes.indexOf(DOMNode), 1);
     }
   };
 
