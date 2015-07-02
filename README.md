@@ -26,3 +26,8 @@ Adds a dom node to the list of nodes that will get fixed when they reach that ve
 ```
 VanillaSticky.attach(DOMNode, offset);
 ```
+
+Removea dom node from the watched nodes
+```
+VanillaSticky.detach(DOMNode);
+```
