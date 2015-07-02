@@ -1,6 +1,6 @@
 {
   "name": "vanillasticky",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Fix elements to the viewport when they scroll past a position. No jQuery!",
   "main": "vanillasticky.js",
   "scripts": {
