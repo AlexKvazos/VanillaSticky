@@ -27,6 +27,7 @@
           top: st.top
         };
         node.unstickAt = window.scrollY;
+        node.classList.add('active');
         st.position = 'fixed';
         st.marginTop = '0px';
         st.top = node.VanillaStickyOffset + 'px';
@@ -42,6 +43,7 @@
         node.style.position = node.oldStickyStyle.position;
         node.style.marginTop = node.oldStickyStyle.marginTop;
         node.style.top = node.oldStickyStyle.top;
+        node.classList.remove('active');
         node.clone = null;
         node.isSticked = false;
       }
